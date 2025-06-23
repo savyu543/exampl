@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duel Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for horizontal scroll container */
+    .scrollbar-x::-webkit-scrollbar {
+      height: 6px;
+    }
+    .scrollbar-x::-webkit-scrollbar-thumb {
+      background-color: #cbd5e1; /* Tailwind slate-300 */
+      border-radius: 3px;
+    }
+    /* Custom legend styling */
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #475569; /* slate-600 */
+    }
+    .legend-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col font-sans text-slate-900">
+
+  <!-- Header -->
+  <header class="bg-black text-white px-6 py-4 flex items-center justify-between">
+    <div class="font-black text-xl select-none cursor-default">duel.</div>
+    <nav class="flex gap-6 text-sm font-semibold tracking-wide">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#" class="text-cyan-400 underline decoration-cyan-400 underline-offset-4 flex items-center gap-1">
+        Activity <span class="block w-2 h-2 rounded-full bg-green-400"></span>
+      </a>
+      <a href="#" class="hover:underline">Members</a>
+      <a href="#" class="hover:underline">Tasks</a>
+      <a href="#" class="hover:underline">Orders</a>
+      <a href="#" class="hover:underline">Social Search</a>
+      <a href="#" class="hover:underline">Promotions</a>
+      <button aria-label="Settings" class="ml-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-white hover:fill-cyan-400 transition-colors" viewBox="0 0 24 24"><path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm8.94-3.5a6.978 6.978 0 0 0-.534-2.106l1.587-1.234-1.5-2.6-1.913 1.333a7.028 7.028 0 0 0-2.057-.997l-.28-2.244h-3l-.281 2.245a6.924 6.924 0 0 0-2.122 1.012L5.48 6.06l-1.5 2.6 1.58 1.23a6.993 6.993 0 0 0 0 4.212l-1.58 1.23 1.5 2.6 1.914-1.334a7.028 7.028 0 0 0 2.056.996l.282 2.245h3l.281-2.244a6.978 6.978 0 0 0 2.064-1.008l1.913 1.334 1.5-2.6-1.587-1.232a6.975 6.975 0 0 0 .536-2.11z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="p-8 max-w-7xl mx-auto flex flex-col gap-12">
+
+    <!-- Advocates Section -->
+    <section>
+
+     <iframe width="600" height="400" src="https://eu-west-1.quicksight.aws.amazon.com/sn/embed/share/accounts/591700125428/dashboards/9371d1f0-3270-4e51-8262-a279a23232cf/sheets/9371d1f0-3270-4e51-8262-a279a23232cf_43082e99-d35c-4eca-ae03-756490b85657/visuals/9371d1f0-3270-4e51-8262-a279a23232cf_28ff4477-420f-4427-bd7f-4cc471a49352?directory_alias=duel-bi"></iframe>
+      <h2 class="text-2xl font-extrabold mb-6 select-none">Advocates</h2>
+      <div class="flex flex-wrap gap-6">
+        <div class="advocate-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[130px] select-none">
+          <span class="text-lg font-bold">2.2k</span>
+          <span class="text-xs text-slate-500 mt-1">New members</span>
+        </div>
+        <div class="advocate-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[130px] select-none">
+          <span class="text-lg font-bold">1.7k</span>
+          <span class="text-xs text-slate-500 mt-1">Active members</span>
+        </div>
+        <div class="advocate-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[130px] select-none">
+          <span class="text-lg font-bold">1.9k</span>
+          <span class="text-xs text-slate-500 mt-1">Checked-in members</span>
+        </div>
+        <div class="advocate-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[130px] select-none">
+          <span class="text-lg font-bold">41k</span>
+          <span class="text-xs text-slate-500 mt-1">Task impressions</span>
+        </div>
+        <div class="advocate-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[130px] select-none">
+          <span class="text-lg font-bold">29k</span>
+          <span class="text-xs text-slate-500 mt-1">Task completions</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Revenue Section -->
+    <section>
+      <h2 class="text-2xl font-extrabold mb-6 select-none">Revenue</h2>
+      <div class="flex flex-wrap gap-6">
+        <div class="revenue-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[140px] select-none">
+          <span class="text-lg font-bold">£818,269</span>
+          <span class="text-xs text-slate-500 mt-1">Total revenue</span>
+        </div>
+        <div class="revenue-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[140px] select-none">
+          <span class="text-lg font-bold">£24,043</span>
+          <span class="text-xs text-slate-500 mt-1">Promotions</span>
+        </div>
+        <div class="revenue-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[140px] select-none">
+          <span class="text-lg font-bold">£190,316</span>
+          <span class="text-xs text-slate-500 mt-1">Referrals &amp; Affiliates</span>
+        </div>
+        <div class="revenue-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[140px] select-none">
+          <span class="text-lg font-bold">£564,468</span>
+          <span class="text-xs text-slate-500 mt-1">Loyalty</span>
+        </div>
+        <div class="revenue-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[140px] select-none">
+          <span class="text-lg font-bold">£39,442</span>
+          <span class="text-xs text-slate-500 mt-1">UGC links</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reach Section -->
+    <section>
+      <h2 class="text-2xl font-extrabold mb-6 select-none">Reach</h2>
+      <div class="flex flex-wrap gap-6">
+        <div class="reach-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[120px] select-none">
+          <span class="text-lg font-bold">1.9k</span>
+          <span class="text-xs text-slate-500 mt-1">Social posts</span>
+        </div>
+        <div class="reach-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[120px] select-none">
+          <span class="text-lg font-bold">12.4m</span>
+          <span class="text-xs text-slate-500 mt-1">Social reach</span>
+        </div>
+        <div class="reach-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[120px] select-none">
+          <span class="text-lg font-bold">32.4k</span>
+          <span class="text-xs text-slate-500 mt-1">Reactions</span>
+        </div>
+        <div class="reach-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[120px] select-none">
+          <span class="text-lg font-bold">5.3k</span>
+          <span class="text-xs text-slate-500 mt-1">Comments</span>
+        </div>
+        <div class="reach-box flex flex-col items-center bg-white rounded-md shadow px-6 py-3 w-[120px] select-none">
+          <span class="text-lg font-bold">1.2k</span>
+          <span class="text-xs text-slate-500 mt-1">Follows</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Maps and Charts Section -->
+    <section class="flex flex-col md:flex-row gap-8">
+
+      <!-- World Map Card -->
+      <div class="flex-1 bg-white rounded-2xl shadow-lg p-6 select-none">
+        <h3 class="font-semibold mb-2 text-slate-700">Locations</h3>
+        <div class="overflow-hidden rounded-lg shadow-md">
+          <!-- Light Blue map on white background with subtle shadows for countries -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" class="w-full h-auto" aria-label="World map showing locations">
+            <rect width="960" height="500" fill="#fff"/>
+            <g fill="#49c0f7" stroke="#38a7e6" stroke-width="0.6" stroke-linejoin="round" style="filter: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05))">
+              <!-- Simplified countries shapes for demonstration -->
+              <path d="M120 150h40l20 10 10 30v20l-10 30-20 10-40-10-10-20 10-30z"/>
+              <path d="M300 120h30l20 5 10 40-10 30-20 20-30-20-10-30 10-40z"/>
+              <path d="M600 230h50l20 20-10 50-30 30-30-20-10-50 10-30z"/>
+              <path d="M750 50h30l30 20-10 40-30 50-40-10-10-50 10-40z"/>
+              <path d="M450 350h60l25 20-15 40-40 35-50-20-20-50 20-40z"/>
+              <!-- More shapes can be added for a full map -->
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Age & Gender Donut Charts Card -->
+      <div class="flex-1 bg-white rounded-2xl shadow-lg p-8 space-y-10 select-none">
+
+        <!-- Age Donut Chart -->
+        <section>
+          <h3 class="font-semibold mb-4 text-slate-700">Age</h3>
+          <div class="flex items-center gap-8">
+            <svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Age distribution donut chart">
+              <circle cx="90" cy="90" r="80" fill="#e2e8f0"/>
+              <!-- Segments using stroke dash array (approximate values for demo) -->
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#05668d" stroke-width="30"
+                stroke-dasharray="25 255" stroke-dashoffset="0" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#028090" stroke-width="30"
+                stroke-dasharray="20 260" stroke-dashoffset="-25" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#00a896" stroke-width="30"
+                stroke-dasharray="15 265" stroke-dashoffset="-45" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#02c39a" stroke-width="30"
+                stroke-dasharray="20 260" stroke-dashoffset="-60" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#66d9e8" stroke-width="30"
+                stroke-dasharray="10 270" stroke-dashoffset="-80" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#90e0ef" stroke-width="30"
+                stroke-dasharray="10 270" stroke-dashoffset="-90" transform="rotate(-90 90 90)" />
+            </svg>
+
+            <!-- Legend -->
+            <div class="flex flex-col gap-2">
+              <div class="legend-item"><span class="legend-color" style="background:#05668d"></span>18-24</div>
+              <div class="legend-item"><span class="legend-color" style="background:#028090"></span>25-34</div>
+              <div class="legend-item"><span class="legend-color" style="background:#00a896"></span>35-44</div>
+              <div class="legend-item"><span class="legend-color" style="background:#02c39a"></span>45-54</div>
+              <div class="legend-item"><span class="legend-color" style="background:#66d9e8"></span>55-64</div>
+              <div class="legend-item"><span class="legend-color" style="background:#90e0ef"></span>65 and older</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gender Donut Chart -->
+        <section>
+          <h3 class="font-semibold mb-4 text-slate-700">Gender</h3>
+          <div class="flex items-center gap-8">
+            <svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Gender distribution donut chart">
+              <circle cx="90" cy="90" r="80" fill="#e2e8f0"/>
+              <!-- Segments -->
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#05445e" stroke-width="30"
+                stroke-dasharray="70 210" stroke-dashoffset="0" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#189ab4" stroke-width="30"
+                stroke-dasharray="20 260" stroke-dashoffset="-70" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#75e6da" stroke-width="30"
+                stroke-dasharray="6 274" stroke-dashoffset="-90" transform="rotate(-90 90 90)" />
+              <circle cx="90" cy="90" r="80" fill="transparent" stroke="#d4f1f4" stroke-width="30"
+                stroke-dasharray="4 276" stroke-dashoffset="-96" transform="rotate(-90 90 90)" />
+            </svg>
+
+            <!-- Legend -->
+            <div class="flex flex-col gap-2">
+              <div class="legend-item"><span class="legend-color" style="background:#05445e"></span>Male</div>
+              <div class="legend-item"><span class="legend-color" style="background:#189ab4"></span>Female</div>
+              <div class="legend-item"><span class="legend-color" style="background:#75e6da"></span>Prefer not to say</div>
+              <div class="legend-item"><span class="legend-color" style="background:#d4f1f4"></span>Other</div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
