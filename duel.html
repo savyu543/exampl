@@ -115,13 +115,14 @@
     <body onload="embedDashboard()">
         <span>
             <label for="country">Country</label>
-            <select id="COUNTRY" name="COUNTRY">
+            <select id="country" name="COUNTRY">
                 <option value="United States">United States</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Canada">Canada</option>
             </select>
         </span>
         <div id="experience-container"></div>
+        <!-- NOTE: Make sure the 'url' in frameOptions is a valid QuickSight embed URL generated via AWS API, not just a share link. -->
     </body>
 
 </html>
