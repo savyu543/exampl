@@ -42,14 +42,15 @@
 
     <!-- Advocates Section -->
     <section>
-      <div class="flex justify-end">
-        <div id="iframeContainer" class="hidden w-[960px]" style="max-width:100%;">
-          <iframe
-            width="960"
-            height="720"
-            src="https://eu-west-1.quicksight.aws.amazon.com/sn/embed/share/accounts/591700125428/dashboards/44cb2b47-c20d-4356-b336-155e1bc109c4?directory_alias=duel-bi">
-          </iframe>
-        </div>
+      <div id="iframeOverlay" class="hidden fixed inset-0 bg-white z-50 flex flex-col">
+        <button id="closeIframe" class="self-end m-4 text-2xl font-bold text-gray-700 hover:text-black">&times;</button>
+        <iframe
+          class="flex-1 w-full"
+          src="https://eu-west-1.quicksight.aws.amazon.com/sn/embed/share/accounts/591700125428/dashboards/44cb2b47-c20d-4356-b336-155e1bc109c4?directory_alias=duel-bi"
+          frameborder="0"
+          style="min-height:0;"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
 
@@ -57,9 +58,15 @@
 
   <script>
     const purchasesBtn = document.getElementById('purchasesBtn');
-    const iframeContainer = document.getElementById('iframeContainer');
+    const iframeOverlay = document.getElementById('iframeOverlay');
+    const closeIframe = document.getElementById('closeIframe');
     purchasesBtn.addEventListener('click', () => {
-      iframeContainer.classList.toggle('hidden');
+      iframeOverlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+    closeIframe.addEventListener('click', () => {
+      iframeOverlay.classList.add('hidden');
+      document.body.style.overflow = '';
     });
   </script>
 
