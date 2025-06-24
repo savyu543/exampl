@@ -39,7 +39,7 @@
                 const contentOptions = {
                     parameters: [
                         {
-                            Name: 'country',
+                            Name: 'COUNTRY',
                             Values: [
                                 'United States'
                             ],
@@ -54,7 +54,7 @@
                     ],
                     locale: "en-US",
                     sheetOptions: {
-                        initialSheetId: '<YOUR_SHEETID>',
+                        initialSheetId: '9371d1f0-3270-4e51-8262-a279a23232cf_3972540c-60f0-4dea-a374-0a9bae518b6f',
                         singleSheet: false,                        
                         emitSizeChangedEventOnSheetChange: false,
                     },
@@ -103,7 +103,7 @@
                 selectCountryElement.addEventListener('change', (event) => {
                     embeddedDashboardExperience.setParameters([
                         {
-                            Name: 'country',
+                            Name: 'COUNTRY',
                             Values: event.target.value
                         }
                     ]);
@@ -115,7 +115,7 @@
     <body onload="embedDashboard()">
         <span>
             <label for="country">Country</label>
-            <select id="country" name="country">
+            <select id="COUNTRY" name="COUNTRY">
                 <option value="United States">United States</option>
                 <option value="Mexico">Mexico</option>
                 <option value="Canada">Canada</option>
