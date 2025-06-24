@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,20 +42,27 @@
 
     <!-- Advocates Section -->
     <section>
-     
-    <iframe
-        width="960"
-        height="720"
-        src="https://eu-west-1.quicksight.aws.amazon.com/sn/embed/share/accounts/591700125428/dashboards/1bc2d6c9-1439-4060-b72f-7a7a4eedb72e?directory_alias=duel-bi">
-    </iframe> 
-      
-        </section>
-
+      <button id="purchasesBtn" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition mb-4">Purchases</button>
+      <div class="flex justify-end">
+        <div id="iframeContainer" class="hidden w-[960px]" style="max-width:100%;">
+          <iframe
+            width="960"
+            height="720"
+            src="https://eu-west-1.quicksight.aws.amazon.com/sn/embed/share/accounts/591700125428/dashboards/44cb2b47-c20d-4356-b336-155e1bc109c4?directory_alias=duel-bi">
+          </iframe>
+        </div>
       </div>
-
     </section>
 
   </main>
+
+  <script>
+    const purchasesBtn = document.getElementById('purchasesBtn');
+    const iframeContainer = document.getElementById('iframeContainer');
+    purchasesBtn.addEventListener('click', () => {
+      iframeContainer.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
